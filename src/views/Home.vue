@@ -4,17 +4,18 @@
     <div class="banner">
       <h1>轱辘UI</h1>
       <h2>一个厉害色 UI 框架</h2>
-      <p class="action">
-        <a href="">GitHub</a>
-        <a href="">开始</a>
+      <p class="actions">
+        <a href="https://github.com">GitHub</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
 </template>
 <script>
 import Topnav from '../components/Topnav.vue'
+
 export default {
-  components:{Topnav}
+  components: {Topnav}
 }
 </script>
 <style lang="scss" scoped>
@@ -27,11 +28,11 @@ export default {
   background: lightgreen;
   > .actions {
     padding: 8px 0;
-    a {
+    > a {
       margin: 0 8px;
       background: #fff;
       display: inline-block;
-      $h: 28px;
+      $h:28px;
       height: $h;
       line-height: $h;
       border-radius: 14px;
