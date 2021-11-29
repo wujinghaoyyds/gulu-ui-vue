@@ -1,15 +1,8 @@
 <template>
-  <div>hi</div>
-  <Wu/>
+  <div>导航栏 | <router-link to="/">Wu</router-link> | <router-link to="/xxx">Wu2</router-link></div>
+  <router-view/>
 </template>
 
 <script>
-import Wu from './components/Wu.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Wu
-  }
-}
+export default {name: 'App'}
 </script>
