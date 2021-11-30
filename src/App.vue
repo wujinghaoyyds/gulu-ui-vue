@@ -13,9 +13,7 @@ export default {
     const asideVisible = ref(width >= 500);
     provide('xxx', asideVisible); // set
     router.afterEach(() => {
-      if (width <= 500) {
-        asideVisible.value = false;
-      }
+      if (width <= 500) {asideVisible.value = false;}
     });
   }
 };
