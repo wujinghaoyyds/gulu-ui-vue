@@ -1,5 +1,5 @@
 <template>
   <div>
-    默认页面
+    <slot/>
   </div>
 </template>

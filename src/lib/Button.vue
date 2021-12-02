@@ -10,31 +10,20 @@ import {computed} from 'vue'
 
 export default {
   props: {
-    theme: {
-      type: String,
-      default: 'button'
-    },
-    size: {
-      type: String,
-      default: 'normal'
-    },
-    level: {
-      type: String,
-      default: 'normal',
-    },
-    disabled:{
-      type:Boolean,
-      default:false,
-    },
-    loading:{
-      type:Boolean,
-      default:false,
-    }
+    theme: {type: String, default: 'button'},
+    size: {type: String, default: 'normal'},
+    level: {type: String, default: 'normal'},
+    disabled: {type: Boolean, default: false},
+    loading: {type: Boolean, default: false}
   },
   setup(props) {
     const {theme, size, level} = props
     const classes = computed(() => {
-      return {[`gulu-theme-${theme}`]: theme,[`gulu-theme-${size}`]: size, [`gulu-level-${level}`]: level,}
+      return {
+        [`gulu-theme-${theme}`]: theme,
+        [`gulu-theme-${size}`]: size,
+        [`gulu-level-${level}`]: level,
+      }
     })
     return {classes}
   }
@@ -167,7 +156,7 @@ $grey: grey;
       color: $grey;
     }
   }
-  > .gulu-loadingIndicator{
+  > .gulu-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -180,7 +169,7 @@ $grey: grey;
   }
 }
 @keyframes gulu-spin {
-  0%{transform: rotate(0deg)}
-  100%{transform: rotate(360deg)}
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
 }
 </style>
