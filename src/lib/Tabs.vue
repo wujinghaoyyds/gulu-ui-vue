@@ -37,7 +37,8 @@ export default {
     });
     const defaults = context.slots.default();// 获取外面传给的子内容
     defaults.forEach((tag) => { // 再看每个内容的标签
-      if (tag.type !== Tab) {throw new Error('Tabs 子标签必须是 Tab');}
+      // @ts-ignore
+      if (tag.type.name !== Tab.name) {throw new Error('Tabs 子标签必须是 Tab');}
     });
     const current = computed(() => { // 计算出的属性，如果是普通属性，只在第一次渲染的时候执行一次，之后再也不执行了
       return defaults.find(tag => tag.props.title === props.selected);
