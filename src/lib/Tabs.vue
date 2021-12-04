@@ -33,7 +33,7 @@ export default {
         const left = left2 - left1;
         indicator.value.style.width = width + 'px';
         indicator.value.style.left = left + 'px';
-      });
+      },{flush:'post'});
     });
     const defaults = context.slots.default();// 获取外面传给的子内容
     defaults.forEach((tag) => { // 再看每个内容的标签
